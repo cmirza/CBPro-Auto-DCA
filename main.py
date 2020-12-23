@@ -1,13 +1,13 @@
 import cbpro
 import time
 
-cbpro_apikey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-cbpro_secret = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-cbpro_passphrase = 'your_passphrase'
+cbpro_apikey = ''
+cbpro_secret = ''
+cbpro_passphrase = ''
 
 
 initiate_deposit_when_run = True
-funding_id = 'XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXXXXXXX'
+funding_id = ''
 deposit_amount = 10.00
 
 buys = {}
@@ -15,7 +15,7 @@ buys['BTC-USD'] = {'buy': True, 'amount': 10.00}
 
 withdraws = {}
 withdraws['BTC-USD'] = {'withdraw': False,
-                        'address': 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'}
+                        'address': ''}
 
 cbpro_api = cbpro.AuthenticatedClient(cbpro_apikey,
                                       cbpro_secret,
@@ -38,7 +38,6 @@ def automated_purchase(event, context):
             qty = float(cbpro_api.get_order(order['id'])['filled_size'])
             withdraws[key]['qty'] = qty
 
-    # withdraw to wallets
     withdraws['BTC-USD']['base'] = 'BTC'
 
     for key in withdraws.keys():
