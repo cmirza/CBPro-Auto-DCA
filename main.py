@@ -1,15 +1,18 @@
 import cbpro
 import time
 
+# user variables
 cbpro_apikey = ''
 cbpro_secret = ''
 cbpro_passphrase = ''
 
-
-initiate_deposit_when_run = True
 funding_id = ''
 deposit_amount = 10.00
 
+# for testing
+initiate_deposit_when_run = True
+
+# amount to purchase
 buys = {}
 buys['BTC-USD'] = {'buy': True, 'amount': 10.00}
 
