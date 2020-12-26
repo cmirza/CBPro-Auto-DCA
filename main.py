@@ -14,7 +14,7 @@ initiate_deposit_when_run = True
 
 # amount to purchase
 buys = {}
-buys['BTC-USD'] = {'buy': True, 'amount': 10.00}
+buys['BTC-USD'] = {'buy': True, 'amount': 5.00}
 
 withdraws = {}
 withdraws['BTC-USD'] = {'withdraw': False,
