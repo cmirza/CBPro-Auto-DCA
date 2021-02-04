@@ -24,6 +24,7 @@ cbpro_api = cbpro.AuthenticatedClient(cbpro_apikey,
                                       cbpro_secret,
                                       cbpro_passphrase)
 
+# automated purchase function
 def automated_purchase(event, context):
 
     if initiate_deposit_when_run:
